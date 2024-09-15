@@ -156,7 +156,16 @@ function Hero() {
         scaleImage(images2[imageSeq.frame], context);
       }
     }
+if(isMobile){
 
+    ScrollTrigger.create({
+        trigger: canvas,
+        pin: true,
+        scroller: mainRef.current,
+        start: "top top",
+        end: "280% top",
+    });
+}else{
     ScrollTrigger.create({
       trigger: canvas,
       pin: true,
@@ -164,15 +173,17 @@ function Hero() {
       start: "top top",
       end: "600% top",
     });
-
+    
+}
+    
     gsap.to("#page1", {
-      scrollTrigger: {
-        trigger: "#page1",
-        start: "top top",
-        end: "bottom top",
-        pin: true,
-        scroller: mainRef.current,
-      },
+        scrollTrigger: {
+            trigger: "#page1",
+            start: "top top",
+            end: "bottom top",
+            pin: true,
+            scroller: mainRef.current,
+        },
     });
 
     gsap.to("#page2", {
