@@ -239,11 +239,13 @@ function Hero() {
       <div ref={mainRef} id="main">
         <div id="page">
           <div id="loop" className="flex justify-center items-center ">
-            <h1 className="flex text-center sm:text-[sm] sm:mr-4 md:text-lg font-bold mb-4 sm:mb-6 md:mb-8">
-              <b className="text-center  text-base sm:text-[sm] sm:mr-4 md:text-lg font-bold mb-4 sm:mb-6 md:mb-8">
-                <i class="quattrocento-bold text-sm ">
-                  YOU SEE THE WORLD AS BINARY, WHEN IT'S MOSIAC.
-                </i>{" "}
+            <h1 className="flex text-center sm:text-[sm] sm:mr-4 md:text-lg font-bold mb-4 sm:mb-20 md:mb-8">
+              <b className="text-center justify-center  text-base sm:text-[sm] sm:mr-4 md:text-lg font-bold mb-4 sm:mb-20 md:mb-8">
+                <div className="mb-2 sm:mb-40 md:mb-36 lg:mb-8 ">
+                  <i class="quattrocento-bold text-sm">
+                    YOU SEE THE WORLD AS BINARY, WHEN IT'S MOSIAC.
+                  </i>{" "}
+                </div>
               </b>
             </h1>
           </div>

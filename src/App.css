@@ -29,6 +29,7 @@ body {
   font-family: "Quattrocento", serif;
   font-weight: 700;
   font-style: normal;
+  
 }
 
 #canvas-container {
@@ -319,6 +320,13 @@ body {
 
 /* Media Query for Mobile Phones */
 @media (max-width: 640px) {
+  .quattrocento-bold {
+  font-family: "Quattrocento", serif;
+  font-weight: 700;
+  font-style: normal;
+  position: relative; /* Establishes a positioning context */
+  top: -100px; /* Moves the text 10px upward; adjust the value as needed */
+}
   #loop {
   display: flex;
   position: absolute;
