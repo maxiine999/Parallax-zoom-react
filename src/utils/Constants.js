@@ -301,12 +301,6 @@ export const files = (index) => {
 ./images/InShot_20240915_025823991_297_31_11zon.jpg
 ./images/InShot_20240915_025823991_298_32_11zon.jpg
 ./images/InShot_20240915_025823991_299_33_11zon.jpg
-./images/part2/InShot_20240915_025823991 (online-video-cutter.com)_000_1_11zon.jpg
-./images/part2/InShot_20240915_025823991 (online-video-cutter.com)_001_2_11zon.jpg
-./images/part2/InShot_20240915_025823991 (online-video-cutter.com)_002_3_11zon.jpg
-./images/part2/InShot_20240915_025823991 (online-video-cutter.com)_003_4_11zon.jpg
-./images/part2/InShot_20240915_025823991 (online-video-cutter.com)_004_5_11zon.jpg
-./images/part2/InShot_20240915_025823991 (online-video-cutter.com)_005_6_11zon.jpg
 ./images/part2/InShot_20240915_025823991 (online-video-cutter.com)_006_7_11zon.jpg
 ./images/part2/InShot_20240915_025823991 (online-video-cutter.com)_007_8_11zon.jpg
 ./images/part2/InShot_20240915_025823991 (online-video-cutter.com)_008_9_11zon.jpg
