@@ -8,7 +8,6 @@ import { files } from "../utils/Constants";
 import Contact from "./Contact";
 import { isMobile } from "react-device-detect";
 
-// Register GSAP plugins
 gsap.registerPlugin(ScrollTrigger);
 
 function Hero() {
@@ -16,11 +15,9 @@ function Hero() {
   const canvasRef = useRef(null);
 
   useEffect(() => {
-    // Initialize Locomotive Scroll
     const locoScroll = new LocomotiveScroll({
       el: mainRef.current,
       smooth: true,
-      // Add more options if necessary
     });
 
     locoScroll.on("scroll", ScrollTrigger.update);
@@ -45,7 +42,6 @@ function Hero() {
     ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
     ScrollTrigger.refresh();
 
-    // Handle resize
     const handleResize = () => {
       if (canvasRef.current) {
         const canvas = canvasRef.current;
@@ -63,7 +59,6 @@ function Hero() {
       }
     };
 
-    // Set up Canvas and Animation
     const canvas = canvasRef.current;
     const context = canvas.getContext("2d");
 
@@ -81,7 +76,7 @@ function Hero() {
       img.src = files(i);
       img.onload = () => {
         if (i === 1) {
-          render(); // Initial render when the first image loads
+          render();
         }
       };
       images2.push(img);
@@ -119,7 +114,6 @@ function Hero() {
     function scaleImage(img, ctx) {
       const canvas = ctx.canvas;
 
-      // Maintain the aspect ratio of the image and canvas
       const canvasAspectRatio = canvas.width / canvas.height;
       const imageAspectRatio = img.width / img.height;
 
@@ -137,33 +131,31 @@ function Hero() {
       const centerShiftY = 0;
 
       ctx.clearRect(0, 0, canvas.width, canvas.height);
-     if(isMobile){
-      ctx.drawImage(
-        img,
-        680,
-        0,
-        img.width,
-        img.height,
-        centerShiftX,
-        centerShiftY,
-        (imgWidth = 1600),
-        (imgHeight = 900)
-      );
-    }else{
-      ctx.drawImage(
-        img,
-        0,
-        0,
-        img.width,
-        img.height,
-        centerShiftX,
-        centerShiftY,
-        imgWidth,
-        imgHeight
-      );
-      
-    }
-      
+      if (isMobile) {
+        ctx.drawImage(
+          img,
+          680,
+          0,
+          img.width,
+          img.height,
+          centerShiftX,
+          centerShiftY,
+          (imgWidth = 1600),
+          (imgHeight = 900)
+        );
+      } else {
+        ctx.drawImage(
+          img,
+          0,
+          0,
+          img.width,
+          img.height,
+          centerShiftX,
+          centerShiftY,
+          imgWidth,
+          imgHeight
+        );
+      }
     }
 
     function render() {
@@ -171,7 +163,6 @@ function Hero() {
         scaleImage(images2[imageSeq.frame], context);
       }
     }
-    // Create ScrollTriggers based on whether the device is mobile or not
     if (isMobile) {
       ScrollTrigger.create({
         trigger: canvas,
@@ -190,7 +181,6 @@ function Hero() {
       });
     }
 
-    // Pinning for #page1
     gsap.to("#page1", {
       scrollTrigger: {
         trigger: "#page1",
@@ -201,7 +191,6 @@ function Hero() {
       },
     });
 
-    // Pinning for #page2
     gsap.to("#page2", {
       scrollTrigger: {
         trigger: "#page2",
@@ -212,7 +201,6 @@ function Hero() {
       },
     });
 
-    // Pinning for #page3 with different configurations for mobile and desktop
     gsap.to("#page3", {
       scrollTrigger: {
         trigger: "#page3",
@@ -224,13 +212,12 @@ function Hero() {
     });
 
     window.addEventListener("resize", handleResize);
-    handleResize(); // Call initially to set canvas size
+    handleResize();
 
-    // Clean up function
     return () => {
       window.removeEventListener("resize", handleResize);
       locoScroll.destroy();
-      ScrollTrigger.getAll().forEach((trigger) => trigger.kill()); // Clean up ScrollTrigger instances
+      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
     };
   }, []);
 

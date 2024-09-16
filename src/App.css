@@ -33,34 +33,30 @@ body {
 }
 
 #canvas-container {
-  position: relative; /* Tailwind's 'relative' */
+  position: relative;
   top: 0px;
-  background-color: black; /* Tailwind's 'bg-black' */
-  z-index: 0; /* Tailwind's 'z-0' */
-  width: 100%; /* Tailwind's 'w-full' */
-  height: 100%; /* Tailwind's 'h-full' */
-  image-rendering:optimizeSpeed; /* Tailwind's 'image-rendering-crisp-edges' */
-  overflow: hidden; /* Prevents overflow if necessary */
+  background-color: black; 
+  z-index: 0; 
+  width: 100%; 
+  height: 100%;
+  image-rendering:optimizeSpeed;
+  overflow: hidden; 
 }
 
-/* For small screens */
-@media (max-width: 640px) { /* Tailwind's 'sm' breakpoint */
+
+@media (max-width: 640px) { 
  #canvas-container {
-  position:absolute; /* Tailwind's 'relative' */
-  top: 0px;
-  background-color: rgb(0, 0, 0); /* Tailwind's 'bg-black' */
-  z-index: 0; /* Tailwind's 'z-0' */
+  position:absolute;
+  background-color: rgb(0, 0, 0); 
+  z-index: 0; 
 
-  width: 100vw; /* Tailwind's 'w-full' */
-  height: 100vh; /* Tailwind's 'h-full' */
-  image-rendering:optimizeSpeed; /* Tailwind's 'image-rendering-crisp-edges' */
-  overflow: hidden; /* Prevents overflow if necessary */
+  width: 100vw; 
+  height: 100vh;
+  image-rendering:optimizeSpeed;
+  overflow: hidden; 
 }
 }
 
-
-
-/* Base styles */
 #page {
   position: relative;
   height: 100vh;
@@ -243,10 +239,7 @@ body {
   font-size: 70px;
 }
 
-/* Base Styles (Desktop) */
-/* Already provided in your code */
 
-/* Media Query for Tablets */
 @media (max-width: 1024px) {
   #loop {
   display: flex;
@@ -259,73 +252,73 @@ body {
   font-family: gilroy;
 }
   #loop > h1 {
-    font-size: 24px; /* Adjust font size for smaller screens */
+    font-size: 24px; 
   }
 
   #loop2 {
-    font-size: 20px; /* Adjust font size for smaller screens */
+    font-size: 20px; 
   }
 
   #page > h3 {
-    font-size: 18px; /* Adjust font size */
-    top: 50%; /* Adjust position */
+    font-size: 18px; 
+    top: 50%; 
   }
 
   #page > h4 {
-    font-size: 22px; /* Adjust font size */
-    top: 57%; /* Adjust position */
+    font-size: 22px; 
+    top: 57%; 
   }
 
   #page1 > #right-text {
-    top: 25%; /* Adjust position */
-    left: 5%; /* Adjust position */
+    top: 25%; 
+    left: 5%; 
   }
 
   #page1 > #right-text > h1 {
-    font-size: 40px; /* Adjust font size */
+    font-size: 40px; 
   }
 
   #page1 > #left-text {
-    top: 40%; /* Adjust position */
-    right: 5%; /* Adjust position */
+    top: 40%; 
+    right: 5%; 
   }
 
   #page1 > #left-text > h1 {
-    font-size: 40px; /* Adjust font size */
+    font-size: 40px; 
   }
 
   #page2 > #text1 {
-    top: 25%; /* Adjust position */
-    left: 5%; /* Adjust position */
+    top: 25%; 
+    left: 5%; 
   }
 
   #page2 > #text1 > h1 {
-    font-size: 45px; /* Adjust font size */
+    font-size: 45px; 
   }
 
   #page2 > #text2 {
-    top: 50%; /* Adjust position */
-    right: 5%; /* Adjust position */
+    top: 50%; 
+    right: 5%; 
   }
 
   #page3 > #text3 {
-    top: 30%; /* Adjust position */
-    right: 5%; /* Adjust position */
+    top: 30%; 
+    right: 5%; 
   }
 
   #page3 > #text3 > h1 {
-    font-size: 50px; /* Adjust font size */
+    font-size: 50px; 
   }
 }
 
-/* Media Query for Mobile Phones */
+
 @media (max-width: 640px) {
   .quattrocento-bold {
   font-family: "Quattrocento", serif;
   font-weight: 700;
   font-style: normal;
-  position: relative; /* Establishes a positioning context */
-  top: -100px; /* Moves the text 10px upward; adjust the value as needed */
+  position: relative;
+  top: -100px; 
 }
   #loop {
   display: flex;
@@ -338,76 +331,76 @@ body {
   font-family: gilroy;
 }
   #loop > h1 {
-    font-size: 18px; /* Adjust font size for mobile screens */
+    font-size: 18px; 
   }
 
   #loop2 {
-    font-size: 16px; /* Adjust font size for mobile screens */
+    font-size: 16px; 
   }
 
   #page > h3 {
-    font-size: 16px; /* Adjust font size */
-    top: 45%; /* Adjust position */
+    font-size: 16px; 
+    top: 45%; 
   }
 
   #page > h4 {
-    font-size: 18px; /* Adjust font size */
-    top: 52%; /* Adjust position */
+    font-size: 18px; 
+    top: 52%; 
   }
 
   #page1 > #right-text {
-    top: 32%; /* Adjust position */
-    left: 7%; /* Adjust position */
+    top: 32%; 
+    left: 7%; 
   }
 
   #page1 > #right-text > h1 {
     top: 100%;
-    font-size: 30px; /* Adjust font size */
+    font-size: 30px; 
   }
 
   #page1 > #left-text {
-    top: 60%; /* Adjust position */
-    right: 8%; /* Adjust position */
+    top: 60%; 
+    right: 8%; 
   }
 
   #page1 > #left-text > h1 {
-    font-size: 30px; /* Adjust font size */
+    font-size: 30px; 
   }
 
   #page2 > #text1 {
-    top: 30%; /* Adjust position */
-    left: 7%; /* Adjust position */
+    top: 30%; 
+    left: 7%; 
   }
 
   #page2 > #text1 > h1 {
-    font-size: 35px; /* Adjust font size */
+    font-size: 35px; 
   }
 
   #page2 > #text2 {
-    top: 55%; /* Adjust position */
-    right: 5%; /* Adjust position */
+    top: 55%; 
+    right: 5%; 
   }
 
   #page3 > #text3 {
-    top: 40%; /* Adjust position */
-    right: 4%; /* Adjust position */
+    top: 40%; 
+    right: 4%; 
   }
 
   #page3 > #text3 > h1 {
-    font-size: 40px; /* Adjust font size */
+    font-size: 40px; 
   }
 
-  /* Navigation bar adjustments */
+  
   #nav {
-    height: 60px; /* Adjust height for smaller screens */
-    padding: 0px 15px; /* Adjust padding */
+    height: 60px; 
+    padding: 0px 15px; 
   }
 
   #nav > h3 {
-    font-size: 18px; /* Adjust font size */
+    font-size: 18px; 
   }
 
   #nav > button {
-    padding: 8px 16px; /* Adjust padding */
+    padding: 8px 16px; 
   }
 }

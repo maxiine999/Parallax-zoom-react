@@ -20,13 +20,13 @@ const Contact = () => {
     event.preventDefault();
     const { firstName, lastName, phone, email, address, message } = userData;
 
-    // Basic validation
+
     if (!firstName || !lastName || !phone || !email || !address || !message) {
       alert("Please fill out all fields");
       return;
     }
 
-    // Optional: More detailed validation (e.g., email format)
+
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailPattern.test(email)) {
       alert("Please enter a valid email address");
@@ -63,7 +63,7 @@ const Contact = () => {
         });
         alert("Your form has been submitted successfully!");
       } else {
-        // Log server response for debugging
+       
         const errorData = await res.json();
         console.error("Server response error:", errorData);
         alert(
@@ -71,7 +71,7 @@ const Contact = () => {
         );
       }
     } catch (error) {
-      // Log network error for debugging
+      
       console.error("Network error:", error);
       alert(
         "An error occurred while submitting the form. Please check your internet connection and try again."
@@ -83,10 +83,10 @@ const Contact = () => {
       className="z-10 relative flex mt-20 items-end text-white "
       id="Contact"
     >
-      {/* Left content */}
+      
       {!isMobile &&
       
-        // Code to run if the user is on a mobile device
+       
         (<div className="w-full md:w-1/2 p-6 flex items-center justify-center ml-10 mb-">
           <div>
             <p className="mb-4 text-[16px]">
@@ -105,7 +105,7 @@ const Contact = () => {
           </div>
         </div>
       )}
-      {/* Right contact form */}
+      
       <div className="w-full md:w-1/2 p-6 flex items-center justify-center">
         <div className="w-full max-w-xl px-4 sm:px-0">
           <div className="shadow-lg rounded-lg p-4 sm:p-6">
