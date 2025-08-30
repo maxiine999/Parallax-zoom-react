@@ -69,9 +69,9 @@ function Hero() {
       frameCount = 350;
     }
     const images2 = [];
-    const imageSeq = { frame: 1 };
+    const imageSeq = { frame: 0 };
 
-    for (let i = 1; i < frameCount - 1; i++) {
+    for (let i = 0; i < frameCount - 1; i++) {
       const img = new Image();
       img.src = files(i);
       img.onload = () => {
@@ -225,18 +225,6 @@ function Hero() {
     <div>
       <div ref={mainRef} id="main">
         <div id="page">
-          <div id="loop" className="flex justify-center items-center ">
-            <h1 className="flex text-center sm:text-[sm] sm:mr-4 md:text-lg font-bold mb-4 sm:mb-20 md:mb-8">
-              <b className="text-center justify-center  text-base sm:text-[sm] sm:mr-4 md:text-lg font-bold mb-4 sm:mb-20 md:mb-8">
-                <div className="mb-2 sm:mb-40 md:mb-36 lg:mb-8 ">
-                  <i class="quattrocento-bold text-sm">
-                    YOU SEE THE WORLD AS BINARY, WHEN IT'S MOSIAC.
-                  </i>{" "}
-                </div>
-              </b>
-            </h1>
-          </div>
-
           <canvas id="canvas-container" ref={canvasRef}></canvas>
         </div>
         <div id="page1">
